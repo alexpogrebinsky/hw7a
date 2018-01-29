@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<!--
+
+    Homework #7
+    January 29 2018
+    Cleveland Codes
+    Cohort 5
+    Alex Pogrebinsky
+
+
+    -->
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Homework 7</title>
+
+    <!--style for page-->
+
+    <style>
+
+        body {
+            background: #ccff99;
+            font-size: 32px;
+            font-family: 'Courier New';
+        }
+
+        .one {
+           
+            border: 2px solid white;
+            padding: 10px;
+            margin: 0 auto;
+            width: 60%;
+            text-align: center;
+            box-shadow: 2px 2px lightgrey;
+            text-shadow: 1px 1px grey;
+            border-radius: 10px;
+        }
+
+        hr {
+            border-top: 0;
+            border-bottom: 1px dashed green;
+            width: 60%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--div formatting-->
+    
+    <div class="one">
+
+        <h1>HM 7a</h1>
+        <hr />
+        <br />
+
+
+        <!--script-->
+
+        <script>
+
+            // first part of homework
+            function startProcess() {
+                alert("checking volume ...");
+            
+                for (i = 1; i <11;i++)
+                {
+                    var length = i + 2;
+                    var width = i + 3;
+                    var height = i + 4;
+                    var result = GetVolume(width, height, length)
+                    document.write(" <br/> " + i +".");
+
+                    if (result >= 60 && result <= 70) {
+                        document.write(" Small Volume: " + result);
+                    }
+
+  
+
+                    else if (result >= 71 && result <= 80) {
+                            document.write(" Medium Volume: " + result);
+                    }
+
+                    else if (result >= 81 && result <= 90) {
+                    document.write(" Large Volume: " + result);
+                    }
+
+                    else if (result >= 91 && result <= 100) {
+                        document.write(" Extra Large Volume: " + result);
+                    }
+                    else {
+                        document.write(" Volume is:" + result);
+                    }
+                       
+                   
+                }
+
+
+                    
+            }
+
+            // second part
+            function GetVolume(width, height, length) {
+                return width * height * length;
+            };
+
+            //must call on startProcess();
+            alert("starting");
+            startProcess();
+
+
+
+        </script>
+        <br />
+        <br />
+    </div>
+
+
+</body>
+</html>
